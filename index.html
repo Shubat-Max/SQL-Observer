@@ -1,0 +1,74 @@
+<!doctype HTML>
+<html>
+    <head>
+        <title>Front-end project</title>
+        <link rel="stylesheet" href="assets/css/common.css">
+        <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
+    </head>
+    <body>
+        
+        <header>
+            <nav>
+                <span class="nav-title">SQL Observer</span>
+                <span class="nav-brk"></span>
+                <a href="#" id="save">save</a>
+                <span class="nav-brk"></span>
+                <a href="#" id="reset">reset</a>
+                <span class="nav-brk"></span>
+                <a href="#" id="share">share</a>
+            </nav>
+        </header>
+        
+        <div class="flx-container">
+
+            <div class="flx-tbl-block">
+                <div class="tbl-block-h">
+                    <span>Tables</span>
+                </div>
+                <div id="tbl-holder" class="tbl-block-b">
+                    <div class="placeholder"><span id="tbl-smp-init" class="beta-link">show/hide sample</span></div>
+                    <div id="tbl-smp-data" class="hidden">
+                        <details>
+                            <summary><span id="db_name_1">books</span> <span id="db_type_1">(TABLE)</span></summary>
+                            <ul>
+                                <li><span id="d_lbl_1_1">id</span>: <span id="d_type_1_1" class="tbl-fld-details">INT UNSIGNED (10)</span></li>
+                                <li><span id="d_lbl_1_2">title</span>: <span id="d_type_1_2" class="tbl-fld-details">VARCHAR (200)</span></li>
+                                <li><span id="d_lbl_1_3">author</span>: <span id="d_type_1_3" class="tbl-fld-details">VARCHAR (40)</span></li>
+                                <li><span id="d_lbl_1_4">publisher</span>: <span id="d_type_1_4" class="tbl-fld-details">INT UNSIGNED (10)</span></li>
+                            </ul>
+                        </details>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flx-main-block">
+                <div class="flx-main-view">
+                    <div class="main-view-h">
+                        <span class="tab active">SQL</span>
+                        <span class="tab">Table View</span>
+                    </div>
+                    <textarea id="query" class="main-view-b">This version of "SQL Observer" allows user to select which field of the table should be displayed as the result.&#13;&#10;
+This version is case sensetive, so all directives MUST be in lower case.&#13;&#10;
+Also "SQL Observer" can display all the data using usual syntax as follow: select * from students&#13;&#10;
+Keep in mind that due to restrictions of task user can operate only with "students" table, attempts to use other tables will be denied.&#13;&#10;&#13;&#10;
+Try this examples:&#13;&#10;&#13;&#10;
+select * from students&#13;&#10;
+select StudentID, LastName, FirstName from students&#13;&#10;
+select LastName, DP, StartYear from students&#13;&#10;
+select LastName, City from students&#13;&#10;</textarea>
+                    <div class="control-panel">
+                        <div id="run-script" class="fb fb-run control-button"></div>
+                    </div>
+                </div>
+                
+                <div class="flx-main-result">
+                    <div class="result-h">
+                        <span>Result</span>
+                    </div>
+                    <div id="response" class="result-b"></div>
+                </div>
+            </div>
+        </div>
+        <script src="assets/js/common.js"></script>
+    </body>
+</html>

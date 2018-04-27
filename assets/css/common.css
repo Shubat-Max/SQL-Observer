@@ -1,0 +1,341 @@
+body{
+    margin:0;
+    padding:0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Noto Serif', serif;
+}
+
+body::-webkit-scrollbar {
+    width: 1em;
+    background-color: #343434;
+}
+ 
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+ 
+body::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+    border-radius: 10px;
+}
+/*
+-----------------------------------------------------------------------------------------
+                                        Navigation
+-----------------------------------------------------------------------------------------
+*/
+nav{
+    background-color: #636363;
+    padding: 10px;
+    height: 30px;
+}
+
+.nav-title{
+    color: #efefef;
+    font-size: 20px;
+}
+
+.nav-brk{
+    border-right: 2px solid #4b4b4b;
+    margin: 0 10px 0 10px;
+}
+
+nav a{
+    color: #efefef;
+}
+/*
+-----------------------------------------------------------------------------------------
+                                        main Content
+-----------------------------------------------------------------------------------------
+*/
+.flx-container{
+    position: absolute;
+    height: calc(100vh - 30px - 20px);
+    display:flex;
+    width: 100%;
+    flex-direction: row;
+    background: #343434;
+}
+/*
+-----------------------------------------------------------------------------------------
+                                        table block
+-----------------------------------------------------------------------------------------
+*/
+.flx-tbl-block{
+    flex:1;
+    display:flex;
+    flex-direction: column;
+    width:40%;
+    margin: 2px 2px 0 0;
+    background-color: #636363;
+}
+
+.tbl-block-h{
+    padding: 10px;
+}
+
+.tbl-block-h span{
+     color: #efefef;
+    font-size: 17px;
+}
+
+.tbl-block-b{
+    background-color: #4b4b4b;
+    padding: 20px;
+    color:#f7f7f7;
+    height:100%;
+    margin: 2px;
+    border: 1px solid #343434;
+    border-radius: 3px;
+    overflow:auto;
+}
+
+.tbl-block-b::-webkit-scrollbar{
+    width: 1em;
+}
+
+.tbl-block-b::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+    border-radius: 10px;
+}
+
+.tbl-block-b ul{
+    list-style: none;
+}
+
+.tbl-block-b details{
+    margin-bottom: 20px;
+}
+
+.tbl-fld-details {
+    text-transform: uppercase;
+}
+
+/*
+summary::-webkit-details-marker {
+  display: none
+}
+
+summary:after{
+    content:"+";
+    float: left;
+    font-size: 2.5em;
+    margin: -20px 10px 0px 0;
+}
+details[open] summary:after {
+    content: "-";
+    margin: -26px 10px 0px 0;
+    font-size: 3em;
+}
+*/
+.placeholder {
+    font-size: 80%;
+    color: #a8a8a8;
+    margin-bottom: 10px;
+}
+
+.beta-link {
+    text-decoration: underline;
+    cursor: pointer;
+    display: inline-block;
+}
+
+
+
+
+
+/*
+-----------------------------------------------------------------------------------------
+                                        main block
+-----------------------------------------------------------------------------------------
+*/
+.flx-main-block{
+    flex:3;
+    display:flex;
+    flex-direction: column;
+    background-color: #343434;
+}
+/*
+-----------------------------------------------------------------------------------------
+                                        main view
+-----------------------------------------------------------------------------------------
+*/
+.flx-main-view{
+    flex:1;
+    display:flex;
+    flex-direction: column;
+    margin: 2px 0;
+
+}
+
+.main-view-h{
+    flex:1;
+}
+
+.main-view-b{
+    flex:18;
+    
+    resize: none;
+    box-shadow: none !important;
+    outline: 2px solid #636363 !important;
+    border: 1px solid #343434 !important;
+    
+    color: #efefef;
+    background: #4b4b4b;
+    
+    margin: 0 2px 2px 2px;
+    padding: 10px;
+    
+    overflow: auto;
+}
+
+.main-view-b:focus{
+    margin: -2px 0 0 0;
+    padding: 12px;
+}
+
+.tab {
+    margin: 0;
+    padding: 0 20px;
+    background: #4b4b4b;
+    color: #efefef;
+    cursor: pointer;
+}
+
+.tab.active {
+    background: #636363;
+    cursor: default;
+}
+
+.control-panel {
+    display: flex;
+    flex-direction: row;
+}
+
+.control-button {
+    flex: 1;
+    border: 1px solid #7c7c7c;
+    border-radius: 2px;
+    background-color: #4b4b4b;
+    cursor: pointer;
+}
+
+/*
+-----------------------------------------------------------------------------------------
+                                        Result
+-----------------------------------------------------------------------------------------
+*/
+
+.flx-main-result{
+    flex:1;
+    display:flex;
+    flex-direction: column;
+    background-color: #636363;
+}
+
+.result-h{
+    flex:1;
+    padding: 10px 20px 10px 20px;
+    color: #efefef;
+}
+
+.result-b{
+    flex:18;
+    overflow:auto;
+    background-color: #4b4b4b;
+    height:auto;
+    margin: 0 2px 2px 2px;
+    border: 1px solid #343434;
+    border-radius: 3px;
+    color: #efefef;
+    font-size: 80%;
+}
+
+.result-b > table {
+    margin: 5px;
+}
+
+.result-b > table th {
+    border-bottom: 1px solid #efefef;
+}
+
+.result-b > table th, .result-b > table td {
+    text-align: left;
+    padding-right: 25px;
+}
+
+.result-b::-webkit-scrollbar{
+    width: 1em;
+}
+
+.result-b::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+    border-radius: 10px;
+}
+
+.result-success {
+    background: #c4df9b;
+    padding: 5px;
+    color: #53761f;
+}
+
+.result-success > span {
+    padding: 5px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.result-fail{
+    background: #f69679;
+    padding: 5px;
+    color: #d00000;
+}
+
+.result-fail > span {
+    display: inline;
+    vertical-align: middle;
+    padding: 5px;
+}
+
+
+
+/*
+-----------------------------------------------------------------------------------------
+                                        Others
+-----------------------------------------------------------------------------------------
+*/
+.hidden {
+    display: none;
+}
+
+.fb {
+    display: inline-block;
+    min-width: 40px;
+    width: 40px;
+    max-width: 40px;
+    min-height: 40px;
+    height: 40px;
+    max-height: 40px;
+    margin: 2px 2px 0 0;
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    vertical-align: middle;
+}
+
+.fb-run {
+    background-image: url("../img/icons/ico_run.png");
+}
+
+.fb-ok {
+    background-image: url("../img/icons/ico_ok.png");
+}
+
+.fb-fail {
+    background-image: url("../img/icons/ico_fail.png");
+}
+
+
